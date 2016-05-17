@@ -5,9 +5,6 @@ version := "1.0"
 scalaVersion := "2.11.6"
 
 resolvers ++= Seq(
-  "Kredito Releases"              at "http://tc.kredito.de:9001/nexus/content/repositories/releases",
-  "Kredito Snapshots"             at "http://tc.kredito.de:9001/nexus/content/repositories/snapshots",
-  "Kredito Third Party"           at "http://tc.kredito.de:9001/nexus/content/repositories/thirdparty",
   "Sbt plugins"                   at "https://dl.bintray.com/sbt/sbt-plugin-releases",
   "Sonatype Releases"             at "http://oss.sonatype.org/content/repositories/releases",
   "Maven Central Server"          at "http://repo1.maven.org/maven2",
