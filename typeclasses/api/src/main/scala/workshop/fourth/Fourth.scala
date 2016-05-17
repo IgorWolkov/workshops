@@ -30,11 +30,13 @@ object Fourth extends TwitterServer {
     )
   }
 
+  // Internal code
   val postUsers: Endpoint[User] = post("api" :: string :: postedUser) { (userId: String, user: User) =>
     val createdUser: User = UserRepository.rawupdate(userId, user)
     Ok(createdUser)
   }
 
+  // Internal code
   val getUsers: Endpoint[User] = get("api" :: string) { (userId: String) =>
     Ok(UserRepository.rawget(userId))
   }

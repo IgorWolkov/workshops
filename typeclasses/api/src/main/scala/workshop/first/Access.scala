@@ -9,12 +9,10 @@ object Access {
   object Allowed extends Status
   object Denied extends Status
 
-  def getAccess(id: String): Access = {
-    if(id == "admin")
-      Access(Allowed)
-    else
-      Access(Denied)
-  }
+  def getAccess(id: String): Access =
+    if(id == "admin") Access(Allowed)
+    else              Access(Denied)
+
 }
 
 import workshop.first.Access._

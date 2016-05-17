@@ -15,18 +15,11 @@ object UserRepository {
 
   private[this] val db: mutable.Map[String, User] = mutable.Map.empty[String, User]
 
-  def get(userId: String): ApiResponse[User] =
-    synchronized {
-      Right(db(userId))
-    }
-
-  def rawget(userId: String): User =
-    synchronized {
-      db(userId)
-    }
+  def get(userId: String): ApiResponse[User] = synchronized { Right(db(userId)) }
 
   def update(userId: String, user: User): ApiResponse[User] =
     synchronized {
+      // Emulate db errors
       if(Math.random() < 0.3)
         Left(ApiErrors(List(ApiError(
           "Database connection failure",
@@ -38,8 +31,13 @@ object UserRepository {
       Right(user)
     }
 
+  // Internal code
+  def rawget(userId: String): User = synchronized { db(userId) }
+
+  // Internal code
   def rawupdate(userId: String, user: User): User =
     synchronized {
+      // Emulate db errors
       if(Math.random() < 0.3)
         throw new DatabaseError
 

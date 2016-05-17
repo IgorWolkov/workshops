@@ -14,13 +14,11 @@ object UserRepository {
 
   private[this] val db: mutable.Map[String, User] = mutable.Map.empty[String, User]
 
-  def get(userId: String): User =
-    synchronized {
-      db(userId)
-    }
+  def get(userId: String): User = synchronized { db(userId) }
 
   def update(userId: String, user: User): User =
     synchronized {
+      // Emulate db errors
       if(Math.random() < 0.3)
         throw new DatabaseError
 

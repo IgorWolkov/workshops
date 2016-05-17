@@ -10,10 +10,8 @@ object Access {
   object Denied extends Status
 
   def getAccess(id: String): Access = {
-    if(id == "admin")
-      Access(Allowed)
-    else
-      Access(Denied)
+    if(id == "admin") Access(Allowed)
+    else              Access(Denied)
   }
 }
 

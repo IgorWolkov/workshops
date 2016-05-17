@@ -10,10 +10,8 @@ import workshop.User
 object UserData {
   class Invalid() extends RuntimeException()
 
-  def attemptSubmission(user: User): Option[User] = {
-    if(user.name != "" && user.email != "")
-      Some(user)
-    else
-      None
-  }
+  def attemptSubmission(user: User): Option[User] =
+    if(user.name != "" && user.email != "") Some(user)
+    else                                    None
+
 }
