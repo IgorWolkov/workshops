@@ -1,0 +1,30 @@
+
+trait John
+trait Carl
+trait Tom
+
+trait Child[T,U]
+
+implicit val john_carl = new Child[John,Carl]{}
+implicit val carl_tom  = new Child[Carl,Tom ]{}
+
+trait GrandChild[T,U]
+
+implicit def grandChild[X,Y,Z](
+                                implicit
+                                xy: Child[X,Y],
+                                yz: Child[Y,Z]
+                              ) = new GrandChild[X,Z] {}
+
+
+implicit def grandChildReordered[X,Y,Z](
+                                         implicit
+                                         yz: Child[Y,Z],
+                                         xy: Child[X,Y]
+                                       ) = new GrandChild[X,Z] {}
+implicitly[ GrandChild[_, Tom] ]
+
+implicitly[ GrandChild[John, _] ]
+
+// See next step
+//implicitly[ GrandChild[_, _] ]
