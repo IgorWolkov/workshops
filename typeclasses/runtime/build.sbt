@@ -1,4 +1,4 @@
-name := "workshop"
+name := "runtime"
 
 version := "1.0"
 
