@@ -1,4 +1,6 @@
-name := "runtime"
+organization := "workshop"
+
+name := "type-classes-runtime"
 
 version := "1.0"
 
