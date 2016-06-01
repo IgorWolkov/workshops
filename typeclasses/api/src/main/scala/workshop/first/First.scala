@@ -18,7 +18,7 @@ object First extends TwitterServer {
 
   val patchedUser: Endpoint[User => User] = body.as[User => User]
 
-  val authenticate: Endpoint[User] = post("api" :: "authenticate" :: string :: patchedUser) { (userId: String, pt: User => User) =>
+  val `update user data`: Endpoint[User] = post("api" :: "authenticate" :: string :: patchedUser) { (userId: String, pt: User => User) =>
     val access = Access.getAccess(userId)
 
     if(access.isAllowed) {
@@ -46,7 +46,7 @@ object First extends TwitterServer {
     log.info("Serving the Todo application")
 
     val server = Http.server
-      .serve(s":8081", (postUsers :+: getUsers :+: authenticate).toService)
+      .serve(s":8081", (postUsers :+: getUsers :+: `update user data`).toService)
 
     onExit { server.close() }
 

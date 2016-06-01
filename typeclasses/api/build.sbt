@@ -1,4 +1,6 @@
-name := "workshop-api"
+organization := "workshop"
+
+name := "type-classes-api"
 
 version := "1.0"
 
