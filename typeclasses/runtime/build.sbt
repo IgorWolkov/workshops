@@ -31,8 +31,8 @@ libraryDependencies ++= Seq(
   "com.github.finagle"            %% "finch-argonaut"                 % "0.10.0",
   "com.github.finagle"            %% "finch-circe"                    % "0.10.0",
   "com.amazonaws"                 % "aws-java-sdk-dynamodb"           % "1.10.77",
-  "com.github.mpilquist"          %% "simulacrum"                     % "0.7.0"
-
+  "com.github.mpilquist"          %% "simulacrum"                     % "0.7.0",
+  "io.argonaut"                   %% "argonaut"                       % "6.1"
 )
 
 addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
