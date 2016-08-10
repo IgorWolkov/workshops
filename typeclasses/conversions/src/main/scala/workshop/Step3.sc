@@ -1,5 +1,4 @@
 import argonaut.Argonaut._
-import argonaut.Parse._
 import argonaut._
 
 case class Person(name: String, age: Int)

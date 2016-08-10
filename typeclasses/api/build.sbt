@@ -7,16 +7,11 @@ version := "1.0"
 scalaVersion := "2.11.6"
 
 resolvers ++= Seq(
-  "Sbt plugins"                   at "https://dl.bintray.com/sbt/sbt-plugin-releases",
-  "Sonatype Releases"             at "http://oss.sonatype.org/content/repositories/releases",
   "Maven Central Server"          at "http://repo1.maven.org/maven2",
   "TypeSafe Repository Releases"  at "http://repo.typesafe.com/typesafe/releases/",
   "TypeSafe Repository Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
   "Sonatype"                      at "https://oss.sonatype.org/content/groups/public",
-  "Twitter"                       at "http://maven.twttr.com",
-  "Edofic snapshots"              at "http://edofic.github.com/repository/snapshots",
-  "Scalaz Bintray Repo"           at "http://dl.bintray.com/scalaz/releases",
-  "Couchbase"                     at "http://files.couchbase.com/maven2/"
+  "Twitter"                       at "http://maven.twttr.com"
 )
 
 resolvers += Resolver.mavenLocal

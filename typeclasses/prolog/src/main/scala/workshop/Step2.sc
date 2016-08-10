@@ -1,3 +1,6 @@
+/**
+  * @see http://rnduja.github.io/2016/01/19/a_shapeless_primer/
+  */
 
 trait John
 trait Carl
@@ -28,3 +31,4 @@ implicitly[ GrandChild[John, _] ]
 
 // See next step
 //implicitly[ GrandChild[_, _] ]
+
