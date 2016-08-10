@@ -1,5 +1,7 @@
-type ¬[A] = A => Nothing
+type ¬[A] = Nothing
 
 type ∨[T, U] = ¬[¬[T] with ¬[U]]
 
-//implicitly[Int <:< (Int ∨ String)]
+//type ¬¬[A] = ¬[¬[A]]
+
+implicitly[Int <:< (Int ∨ String)]

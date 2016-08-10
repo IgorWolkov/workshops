@@ -8,6 +8,7 @@ import io.circe.generic.auto._
 import io.finch.circe._
 import io.finch.{Endpoint, _}
 import workshop.User
+import shapeless._
 
 /**
   * Created by Igor Wolkov
