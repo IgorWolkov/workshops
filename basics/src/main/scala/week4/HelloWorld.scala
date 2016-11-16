@@ -1,7 +1,7 @@
 package week4
 
 /**
-  * Created by st on 09.11.16.
+  * Created by Igor Wolkov on 09.11.16.
   */
 object HelloWorld {
 
