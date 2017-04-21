@@ -17,8 +17,9 @@ resolvers ++= Seq(
 resolvers += Resolver.mavenLocal
 
 libraryDependencies ++= Seq(
-  "com.github.finagle" %% "finch-core"    % "0.14.0",
-  "com.github.finagle" %% "finch-circe"   % "0.14.0",
-  "io.circe"           %% "circe-generic" % "0.7.0"
+  "com.twitter"        %% "twitter-server"  % "1.28.0",
+  "com.github.finagle" %% "finch-core"      % "0.14.0",
+  "com.github.finagle" %% "finch-circe"     % "0.14.0",
+  "io.circe"           %% "circe-generic"   % "0.7.0"
 )
 
